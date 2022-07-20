@@ -1,2 +1,7 @@
 # vbaf
 Video-based assessment of foot kinematics
+
+## Overview
+For over several decades now, marker-based tracking of body segments to analyse human movement is the golden standard in clinical practice. Retro-reflective markers are taped to the body and their movement in 3D space is captured using multiple infra-red cameras. The locations of the markers are tracked with great accuracy. Although, this technique has multiple disadvantages: accuracy of resulting kinematics relies on marker placement, skin artefacts are present, the multi-camera setup is expensive, patient preparation takes time and for some patients the markers feel uncomfortable on their sensitive skin. In this project, we will evaluate whether we can use DeepLabCut - a deep learning software - to accurately estimate foot kinematics from video-images. Accurate video-based assessment of foot kinematics could improve the diagnosis of foot pathologies in a clinical setting in the future.
+
+The purpose of this study is to explore the feasibility of incorporating markerless motion capture into gait analysis by using DeepLabCut to track the motion of the foot, using the Oxford Foot Model  as the underlying kinematic model. We will use a hybrid tracking approach, utilizing DeepLabCut to track the landmarks of the foot and reflective markers to track the pelvis, thigh, and shank. Additionally, we will compare the kinematics of hybrid tracking to full marker-based tracking. 
