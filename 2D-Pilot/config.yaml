@@ -1,0 +1,97 @@
+    # Project definitions (do not edit)
+Task: vbaf-pilot-2d
+scorer: zr-bvdb
+date: Aug25
+multianimalproject: false
+identity:
+
+    # Project path (change when moving around)
+project_path: /home/zach/Documents/vbaf-pilot-2d/vbaf-pilot-2d-zr-bvdb-2022-08-25
+
+    # Annotation data set configuration (and individual video cropping parameters)
+video_sets:
+  /home/zach/Documents/vbaf-pilot-2d/vbaf-pilot-2d-zr-bvdb-2022-08-25/videos/Pilot02_pigDots_1_Miqus_1_26470.mp4:
+    crop: 412, 1271, 320, 1078
+  /home/zach/Documents/vbaf-pilot-2d/vbaf-pilot-2d-zr-bvdb-2022-08-25/videos/Pilot02_pigDots_1_Miqus_2_26505.mp4:
+    crop: 192, 883, 277, 1078
+  /home/zach/Documents/vbaf-pilot-2d/vbaf-pilot-2d-zr-bvdb-2022-08-25/videos/Pilot02_pigDots_1_Miqus_3_25888.mp4:
+    crop: 0, 1917, 345, 657
+  /home/zach/Documents/vbaf-pilot-2d/vbaf-pilot-2d-zr-bvdb-2022-08-25/videos/Pilot02_pigDots_1_Miqus_4_26472.mp4:
+    crop: 494, 1278, 460, 1078
+  /home/zach/Documents/vbaf-pilot-2d/vbaf-pilot-2d-zr-bvdb-2022-08-25/videos/Pilot02_pigDots_1_Miqus_5_26472.mp4:
+    crop: 197, 950, 358, 1078
+  /home/zach/Documents/vbaf-pilot-2d/vbaf-pilot-2d-zr-bvdb-2022-08-25/videos/Pilot02_pigDots_1_Miqus_6_26502.mp4:
+    crop: 0, 1916, 512, 800
+  /home/zach/Documents/vbaf-pilot-2d/vbaf-pilot-2d-zr-bvdb-2022-08-25/videos/Pilot02_pigDots_2_Miqus_1_26470.mp4:
+    crop: 391, 1274, 313, 1078
+  /home/zach/Documents/vbaf-pilot-2d/vbaf-pilot-2d-zr-bvdb-2022-08-25/videos/Pilot02_pigDots_2_Miqus_2_26505.mp4:
+    crop: 391, 1274, 315, 1077
+  /home/zach/Documents/vbaf-pilot-2d/vbaf-pilot-2d-zr-bvdb-2022-08-25/videos/Pilot02_pigDots_2_Miqus_3_26505.mp4:
+    crop: 0, 1918, 367, 662
+  /home/zach/Documents/vbaf-pilot-2d/vbaf-pilot-2d-zr-bvdb-2022-08-25/videos/Pilot02_pigDots_2_Miqus_4_26505.mp4:
+    crop: 492, 1276, 455, 1075
+  /home/zach/Documents/vbaf-pilot-2d/vbaf-pilot-2d-zr-bvdb-2022-08-25/videos/Pilot02_pigDots_2_Miqus_5_26472.mp4:
+    crop: 196, 992, 339, 1078
+  /home/zach/Documents/vbaf-pilot-2d/vbaf-pilot-2d-zr-bvdb-2022-08-25/videos/Pilot02_pigDots_2_Miqus_6_26472.mp4:
+    crop: 0, 1917, 507, 806
+bodyparts:
+- RD5M
+- RP5M
+- RLCA
+- RCPA
+- RCPG
+- RHLX
+- RD1M
+- RP1M
+- RMMA
+- RSTL
+- LD5M
+- LP5M
+- LLCA
+- LCPA
+- LCPG
+- LHLX
+- LD1M
+- LP1M
+- LMMA
+- LSTL
+
+    # Fraction of video to start/stop when extracting frames for labeling/refinement
+start: 0
+stop: 1
+numframes2pick: 20
+
+    # Plotting configuration
+skeleton:
+- - bodypart1
+  - bodypart2
+- - objectA
+  - bodypart3
+skeleton_color: black
+pcutoff: 0.6
+dotsize: 2
+alphavalue: 0.7
+colormap: spring
+
+    # Training,Evaluation and Analysis configuration
+TrainingFraction:
+- 0.95
+iteration: 0
+default_net_type: resnet_152
+default_augmenter: imgaug
+snapshotindex: -1
+batch_size: 6
+
+    # Cropping Parameters (for analysis and outlier frame detection)
+cropping: false
+    #if cropping is true for analysis, then set the values here:
+x1: 0
+x2: 640
+y1: 277
+y2: 624
+
+    # Refinement configuration (parameters from annotation dataset configuration also relevant in this stage)
+corner2move2:
+- 50
+- 50
+move2corner: true
